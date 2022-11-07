@@ -1,7 +1,6 @@
 services:
   - type: web
-    name: render-404
-    plan: free
-    env: rubyruby
+    name: render-404-paid
+    env: ruby
     buildCommand: ./render-build.sh
     startCommand: ./render-start.sh
