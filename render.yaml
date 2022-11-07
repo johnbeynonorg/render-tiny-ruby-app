@@ -4,3 +4,4 @@ services:
     env: ruby
     buildCommand: ./render-build.sh
     startCommand: ./render-start.sh
+    healthCheckPath: /?health=true
