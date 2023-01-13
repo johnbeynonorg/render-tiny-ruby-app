@@ -2,4 +2,4 @@
 # exit on error
 set -o errexit
 
-bundle exec ruby app.rb
+bundle exec ruby app.rb -p 3000
