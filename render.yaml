@@ -3,5 +3,3 @@ services:
     name: sample-ruby-app
     plan: free
     env: docker
-    buildCommand: ./render-build.sh
-    startCommand: ./render-start.sh
