@@ -1,7 +1,7 @@
 services:
   - type: web
     name: sample-ruby-app
-    plan: free
+    plan: starter
     env: ruby
     buildCommand: ./render-build.sh
     startCommand: ./render-start.sh
