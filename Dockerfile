@@ -1,7 +1,7 @@
 # syntax = docker/dockerfile:experimental
-ARG RUBY_VERSION=2.7.3
+ARG RUBY_VERSION=2.7.8
 ARG VARIANT=jemalloc-slim
-FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-${VARIANT} as base
+FROM ruby:${RUBY_VERSION} as base
 
 ARG BUNDLER_VERSION=2.3.9
 
@@ -27,9 +27,7 @@ FROM base as build_deps
 ARG DEV_PACKAGES="git build-essential libpq-dev wget vim curl gzip xz-utils libsqlite3-dev"
 ENV DEV_PACKAGES ${DEV_PACKAGES}
 
-RUN --mount=type=cache,id=dev-apt-cache,sharing=locked,target=/var/cache/apt \
-	--mount=type=cache,id=dev-apt-lib,sharing=locked,target=/var/lib/apt \
-	apt-get update -qq && \
+RUN	apt-get update -qq && \
 	apt-get install --no-install-recommends -y ${DEV_PACKAGES} \
 	&& rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
@@ -38,16 +36,15 @@ FROM build_deps as gems
 RUN gem install -N bundler -v ${BUNDLER_VERSION}
 
 COPY Gemfile* ./
-RUN bundle install &&  rm -rf vendor/bundle/ruby/*/cache
+RUN echo ruby --version
+RUN bundle install 
 
 FROM base
 
 ARG PROD_PACKAGES=""
 ENV PROD_PACKAGES=${PROD_PACKAGES}
 
-RUN --mount=type=cache,id=prod-apt-cache,sharing=locked,target=/var/cache/apt \
-	--mount=type=cache,id=prod-apt-lib,sharing=locked,target=/var/lib/apt \
-	apt-get update -qq && \
+RUN apt-get update -qq && \
 	apt-get install --no-install-recommends -y \
 	${PROD_PACKAGES} \
 	&& rm -rf /var/lib/apt/lists /var/cache/apt/archives
