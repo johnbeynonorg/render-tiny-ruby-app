@@ -2,4 +2,4 @@
 # exit on error
 set -o errexit
 
-bundle exec ruby app.rb -a 0.0.0.0
+bundle exec ruby app.rb 
