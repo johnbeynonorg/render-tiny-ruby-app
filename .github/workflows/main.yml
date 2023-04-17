@@ -31,7 +31,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: johnbeynonorg/render-tiny-ruby-app:latest
+          tags: ghcr.io/johnbeynonorg/render-tiny-ruby-app:latest
 
       - name: Deploy to production
         uses: johnbeynon/render-deploy-action@v0.0.8
