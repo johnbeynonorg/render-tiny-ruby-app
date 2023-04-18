@@ -34,7 +34,7 @@ jobs:
           tags: ghcr.io/johnbeynonorg/render-tiny-ruby-app:latest
 
       - name: Deploy to production
-        uses: johnbeynon/render-deploy-action@master
+        uses: johnbeynon/render-deploy-action@improveoutput
         with:
           service-id: ${{ secrets.RENDER_SERVICE_ID }}
           api-key: ${{ secrets.RENDER_API_KEY }}
