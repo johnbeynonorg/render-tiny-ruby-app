@@ -4,6 +4,3 @@ services:
     plan: free
     image:
     url: ghcr.io/johnbeynonorg/render-tiny-ruby-app
-    creds:
-      fromRegistryCreds:
-        name: ghcr
