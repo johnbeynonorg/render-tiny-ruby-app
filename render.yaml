@@ -1,5 +1,9 @@
 services:
   - type: web
-    name: sample-ruby-app
+    name: sample-ruby-app-byoc
     plan: free
-    env: docker
+    image:
+    url: ghcr.io/johnbeynonorg/render-tiny-ruby-app
+    creds:
+      fromRegistryCreds:
+        name: ghcr
