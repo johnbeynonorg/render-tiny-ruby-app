@@ -1,3 +1,4 @@
+previewsEnabled: true
 services:
   - type: web
     initialDeployHook: copy_db_from_heroku.sh
