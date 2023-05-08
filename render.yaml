@@ -1,7 +1,18 @@
 services:
   - type: web
+    initialDeployHook: copy_db_from_heroku.sh
     name: sample-ruby-app
     plan: free
     env: ruby
     buildCommand: ./render-build.sh
     startCommand: ./render-start.sh
+    envVars:
+      - key: DB_URL
+        fromDatabase:
+          name: mydb
+          property: connectionString
+      - fromGroup: heroku-creds
+
+databases:
+  - name: mydb
+    plan: free
