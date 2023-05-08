@@ -1,7 +1,7 @@
 previewsEnabled: true
 services:
   - type: web
-    initialDeployHook: copy_db_from_heroku.sh
+    initialDeployHook: ./copy_db_from_heroku.sh
     name: sample-ruby-app
     plan: starter
     env: ruby
