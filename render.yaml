@@ -2,7 +2,7 @@ services:
   - type: web
     initialDeployHook: copy_db_from_heroku.sh
     name: sample-ruby-app
-    plan: free
+    plan: starter
     env: ruby
     buildCommand: ./render-build.sh
     startCommand: ./render-start.sh
@@ -15,4 +15,4 @@ services:
 
 databases:
   - name: mydb
-    plan: free
+    plan: starter
