@@ -1,4 +1,4 @@
-previewsEnabled:true
+previewsEnabled: true
 services:
   - type: web
     name: sample-ruby-app
