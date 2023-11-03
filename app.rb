@@ -2,5 +2,5 @@
 require 'sinatra'
 
 get '/' do
-  puts "Hello"
+  puts "Hello from Ruby #{RUBY_VERSION} (p#{RUBY_PATCHLEVEL})!"
 end
