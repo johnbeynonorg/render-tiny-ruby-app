@@ -5,3 +5,7 @@ services:
     env: ruby
     buildCommand: ./render-build.sh
     startCommand: ./render-start.sh
+
+databases:
+  - name: a-database
+    plan: starter
