@@ -1,4 +1,5 @@
-previewsEnabled: true
+previews:
+  generation: automatic
 services:
   - type: web
     name: sample-ruby-app
