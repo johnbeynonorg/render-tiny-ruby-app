@@ -12,7 +12,7 @@ services:
     buildCommand: ./render-build.sh
     startCommand: ./render-start.sh
   - type: web
-    name: app1-frankfurt
+    name: app1-virginia
     region: virginia
     plan: starter
     envVars:
