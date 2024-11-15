@@ -2,8 +2,23 @@ previews:
   generation: automatic
 services:
   - type: web
-    name: sample-ruby-app
-    plan: free
-    env: ruby
+    name: app1-frankfurt
+    region: frankfurt
+    plan: starter
+    envVars:
+      - key: REGION
+        value: "Frankfurt"
+    runtime: ruby
     buildCommand: ./render-build.sh
     startCommand: ./render-start.sh
+  - type: web
+    name: app1-frankfurt
+    region: virginia
+    plan: starter
+    envVars:
+      - key: REGION
+        value: "Virginia"
+    runtime: ruby
+    buildCommand: ./render-build.sh
+    startCommand: ./render-start.sh
+
