@@ -2,6 +2,7 @@ previews:
   generation: automatic
 services:
   - type: web
+    region: frankfurt
     name: sample-ruby-app
     plan: free
     env: ruby
