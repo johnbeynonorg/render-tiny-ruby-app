@@ -1,2 +1,2 @@
 <h1>Hello from <%= ENV['REGION'] %>!</h1>
-<img src="#{ENV['REGION']}.jpeg" />
+<img src="<%= ENV['REGION'].downcase %>.jpeg" />
