@@ -5,6 +5,7 @@ services:
     name: app1-frankfurt
     region: frankfurt
     plan: starter
+    autoDeploy: false
     envVars:
       - key: REGION
         value: "Frankfurt"
@@ -20,6 +21,6 @@ services:
       - key: REGION
         value: "Virginia"
     runtime: ruby
-    buildCommand: ./render-build.sh
+    buildCommand: echo "hello" && ./render-build.sh
     startCommand: ./render-start.sh
 
