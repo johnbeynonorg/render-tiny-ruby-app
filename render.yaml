@@ -15,6 +15,7 @@ services:
     name: app1-virginia
     region: virginia
     plan: starter
+    autoDeploy: false
     envVars:
       - key: REGION
         value: "Virginia"
