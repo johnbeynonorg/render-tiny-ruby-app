@@ -21,6 +21,6 @@ services:
       - key: REGION
         value: "Virginia"
     runtime: ruby
-    buildCommand: echo "hello" && ./render-build.sh
+    buildCommand: ./render-build.sh
     startCommand: ./render-start.sh
 
