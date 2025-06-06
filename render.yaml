@@ -4,7 +4,7 @@ services:
     plan: free
     env: ruby
     envVars:
-      key: env
+      - key: env
       value: test
     buildCommand: ./render-build.sh
     startCommand: ./render-start.sh
