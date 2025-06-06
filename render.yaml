@@ -3,5 +3,8 @@ services:
     name: sample-ruby-app-new
     plan: free
     env: ruby
+    envVars:
+      key: env
+      value: test
     buildCommand: ./render-build.sh
     startCommand: ./render-start.sh
