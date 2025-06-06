@@ -1,3 +1,4 @@
+previewsEnabled: true
 services:
   - type: web
     name: sample-ruby-app-new
@@ -8,3 +9,7 @@ services:
         value: test
     buildCommand: ./render-build.sh
     startCommand: ./render-start.sh
+
+databases:
+  - name: a-database
+    plan: starter
