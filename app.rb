@@ -1,6 +1,7 @@
 # myapp.rb
 require 'sinatra'
+require 'net/http'
 
 get '/' do
-  puts "Hello"
+  "Hello from #{Net::HTTP.get(uri)}"
 end
