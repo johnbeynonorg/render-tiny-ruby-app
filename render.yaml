@@ -1,3 +1,6 @@
+previews:
+  generation: automatic
+
 projects:
   - name: sample-ruby-app
     environments:
