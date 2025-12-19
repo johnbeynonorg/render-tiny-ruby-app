@@ -15,3 +15,5 @@ projects:
                 value: test
             buildCommand: ./render-build.sh
             startCommand: ./render-start.sh
+            preDeployCommand: ./render-predeploy.sh
+            initialDeployHookCommand: ./render-initialdeployhook.sh

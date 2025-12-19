@@ -1,0 +1,1 @@
+echo "Predeploy execution started."
