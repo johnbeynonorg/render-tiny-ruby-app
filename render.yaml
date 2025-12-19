@@ -8,7 +8,7 @@ projects:
         services:
           - type: web
             name: sample-ruby-app-new
-            plan: free
+            plan: starter
             env: ruby
             envVars:
               - key: env
