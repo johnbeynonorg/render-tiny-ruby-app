@@ -13,7 +13,7 @@ projects:
             envVars:
               - key: env
                 value: test
-            buildCommand: ./render-build.sh
+            buildCommand: ./render-build.sh; echo "buildCommand"
             startCommand: ./render-start.sh
             preDeployCommand: ./render-predeploy.sh
             initialDeployHook: ./render-initialdeployhook.sh
