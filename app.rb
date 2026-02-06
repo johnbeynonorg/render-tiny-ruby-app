@@ -2,5 +2,5 @@
 require 'sinatra'
 
 get '/' do
-  puts "Hello"
+  "<h1>Hello from #{ENV['env']}</h1>"
 end

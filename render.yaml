@@ -2,7 +2,7 @@ previews:
   generation: automatic
 
 projects:
-  - name: sample-ruby-app
+  - name: sample-ruby-app-single-yaml
     environments:
       - name: production
         services:
@@ -10,8 +10,20 @@ projects:
             name: sample-ruby-app-new
             plan: free
             env: ruby
+            autoDeploy: false
             envVars:
               - key: env
-                value: test
+                value: production
+            buildCommand: ./render-build.sh
+            startCommand: ./render-start.sh
+      - name: staging
+        services:
+          - type: web
+            name: sample-ruby-app-new
+            plan: free
+            env: ruby
+            envVars:
+              - key: env
+                value: staging
             buildCommand: ./render-build.sh
             startCommand: ./render-start.sh
