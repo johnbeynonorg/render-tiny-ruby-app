@@ -15,3 +15,16 @@ projects:
             startCommand: ./render-start.sh
             preDeployCommand: ./render-predeploy.sh
             initialDeployHook: ./render-initialdeployhook.sh
+          - type: web
+            name: sample-ruby-app-new-second
+            plan: starter
+            env: ruby
+            autoDeploy: false
+            envVars:
+              - key: env
+                value: production
+            buildCommand: ./render-build.sh; echo "buildCommand"
+            startCommand: ./render-start.sh
+            preDeployCommand: ./render-predeploy.sh
+            initialDeployHook: ./render-initialdeployhook.sh
+
