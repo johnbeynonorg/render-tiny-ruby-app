@@ -19,7 +19,7 @@ projects:
       - name: staging
         services:
           - type: web
-            name: sample-ruby-app-new
+            name: sample-ruby-app-new-staging-v2
             plan: free
             env: ruby
             envVars:
