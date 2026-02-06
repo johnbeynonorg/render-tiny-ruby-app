@@ -7,7 +7,7 @@ projects:
             name: sample-ruby-app-new
             plan: starter
             env: ruby
-            autoDeployTrigger: false
+            autoDeploy: false
             envVars:
               - key: env
                 value: production
