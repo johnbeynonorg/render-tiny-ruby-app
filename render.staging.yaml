@@ -1,0 +1,19 @@
+previews:
+  generation: automatic
+
+projects:
+  - name: sample-ruby-app
+    environments:
+      - name: staging
+        services:
+          - type: web
+            name: sample-ruby-app-new
+            plan: starter
+            env: ruby
+            envVars:
+              - key: env
+                value: staging
+            buildCommand: ./render-build.sh; echo "buildCommand"
+            startCommand: ./render-start.sh
+            preDeployCommand: ./render-predeploy.sh
+            initialDeployHook: ./render-initialdeployhook.sh

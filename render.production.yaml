@@ -1,6 +1,3 @@
-previews:
-  generation: automatic
-
 projects:
   - name: sample-ruby-app
     environments:
@@ -10,9 +7,10 @@ projects:
             name: sample-ruby-app-new
             plan: starter
             env: ruby
+            autoDeployTrigger: false
             envVars:
               - key: env
-                value: test
+                value: production
             buildCommand: ./render-build.sh; echo "buildCommand"
             startCommand: ./render-start.sh
             preDeployCommand: ./render-predeploy.sh
