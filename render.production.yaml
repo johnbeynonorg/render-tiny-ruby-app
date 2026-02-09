@@ -16,7 +16,7 @@ projects:
             preDeployCommand: ./render-predeploy.sh
             initialDeployHook: ./render-initialdeployhook.sh
           - type: web
-            name: sample-ruby-app-new-third
+            name: sample-ruby-app-new-four
             plan: starter
             env: ruby
             autoDeploy: false
