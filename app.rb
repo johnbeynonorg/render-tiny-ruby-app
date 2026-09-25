@@ -2,5 +2,5 @@
 require 'sinatra'
 
 get '/' do
-  puts "Hello"
+  puts "Goodbye"
 end
